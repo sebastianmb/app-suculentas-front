@@ -55,7 +55,7 @@ body {
   width: 70%;
   height: 90%;
   float:right;
-  font-size: 14px;
+  font-size: 17px;
 }
 
 #menu ul{
@@ -86,13 +86,13 @@ body {
 
 
 /*Slider*/
-.hero-banner-container{
-  padding: 100px 40px;
+.hero-banner-container {
+  padding: 50px 40px;
   background-color: #dcdcdc;
   border-radius: 15px;
   position: relative;
-  height: 500px;
-  line-height: 0.9; 
+  height: 300px;
+  line-height: 0.5;
   width: 100%;
 
 }
@@ -100,7 +100,7 @@ body {
   font-size: 20px;
 }
 .hero-banner-container button{
-   border-radius: 15px;
+  border-radius: 15px;
   padding: 10px 16px;
   background-color: #f02d34;
   color: white;
@@ -113,12 +113,12 @@ body {
 }
 
 .hero-banner-container h3{
-  font-size: 4rem;
+  font-size: 3rem;
   margin-top: 4px;
 }
 .hero-banner-container h1{
   color: white;
-  font-size: 10em;
+  font-size: 6em;
   margin-left: -20px;
   text-transform: uppercase;
 }
