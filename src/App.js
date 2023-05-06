@@ -2,7 +2,7 @@ import './App.css';
 
 
 //Components
-import Header from './components/Header/Index';
+import Header from './components/Header';
 import Slider from './components/Slider/Index';
 import Home from './components/Home/Index';
 import Ecommerce from './components/Ecommerce/Index';
