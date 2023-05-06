@@ -1,5 +1,6 @@
 import './App.css';
 
+
 //Components
 import Header from './components/Header/Index';
 import Slider from './components/Slider/Index';
@@ -27,6 +28,7 @@ function App() {
       {/*Footer*/}
       <Footer/>
 
+      
     </div>
   );
 }
