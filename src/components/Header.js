@@ -1,34 +1,35 @@
 import React from 'react';
 import plant from "../assets/images/potted-plant.svg";
 
+
 const Header = () => {
   return (
     <div>
       <header id="header">
         <div className="center">
-          {/*LOGO*/}  
+          {/*LOGO*/}
           <div id="logo">
             <img src={plant} className="app-logo" alt="Logotipo" />
             <span id="brand">
               <strong>Gop</strong>
             </span>
           </div>
-            {/*MENU*/} 
+          {/*MENU*/}
           <nav id="menu">
             <ul>
               <li>
-                <a >Arma tu mosaico</a>
+                Arma tu mosaico
               </li>
               <li>
-                <a >Pantas</a>
+                Plantas
               </li>
               <li>
-                <a >Fertilizantes</a>
+                Fertilizantes
               </li>
-             
+
             </ul>
           </nav>
-            {/*LIMPIAR FLOTADOS*/} 
+          {/*LIMPIAR FLOTADOS*/}
           <div className="clearfix"></div>
         </div>
       </header>
