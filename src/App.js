@@ -4,8 +4,7 @@ import './App.css';
 //Components
 import Header from './components/Header';
 import Slider from './components/Slider';
-import Home from './components/Home/Index';
-import Ecommerce from './components/Ecommerce/Index';
+import Adverstiment from './components/Adverstiment';
 import Footer from './components/Footer/Index'
 
 
@@ -20,10 +19,10 @@ function App() {
       <Slider/>
 
       {/*Home*/}
-      <Home/>
+      <Adverstiment/>
 
       {/*Commerce*/}
-      <Ecommerce/>
+      
 
       {/*Footer*/}
       <Footer/>
