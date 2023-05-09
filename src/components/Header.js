@@ -11,7 +11,7 @@ const Header = () => {
           <div id="logo">
             <img src={plant} className="app-logo" alt="Logotipo" />
             <span id="brand">
-              <strong>Gop</strong>
+              <strong>Pot</strong>
             </span>
           </div>
           {/*MENU*/}
