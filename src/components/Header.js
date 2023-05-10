@@ -1,5 +1,7 @@
 import React from 'react';
 import plant from "../assets/images/potted-plant.svg";
+import clock from "../assets/images/clock-time.svg";
+import call from "../assets/images/call.svg";
 
 
 const Header = () => {
@@ -18,15 +20,13 @@ const Header = () => {
           <nav id="menu">
             <ul>
               <li>
-                Arma tu mosaico
+                <img src={clock} className="clock-call" alt="clock" />
+                <span>LUN - VIE 7:00 A.M - 5:00 P.M</span>
               </li>
               <li>
-                Plantas
+                <img src={call} className="clock-call" alt="call" />
+                <span>+57 3196418371</span>
               </li>
-              <li>
-                Fertilizantes
-              </li>
-
             </ul>
           </nav>
           {/*LIMPIAR FLOTADOS*/}

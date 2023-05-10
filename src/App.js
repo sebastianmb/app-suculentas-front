@@ -9,7 +9,7 @@ import Pot from './components/Pot';
 import Plantone from './components/Plantone';
 import Planttwo from './components/Planttwo';
 import Plantthree from './components/Plantthree';
-import Footer from './components/Footer/Index'
+import Footer from './components/Footer'
 
 
 function App() {
