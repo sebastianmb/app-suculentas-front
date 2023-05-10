@@ -1,15 +1,17 @@
 import React from 'react'
+import suculentas from '../assets/images/suculentas.png'
 
 const Slider = () => {
   return (
     <div className="hero-banner-container">
       <div>
-        <p className="beats-solo">small text</p>
-        <h3>midtext</h3>
-        <h1>largetext1</h1>
-        <img src="#" alt="headphones" className="hero-banner-image" />
+        <img src={suculentas} alt="suculentas" className="hero-banner-image" />
+        <p className="beats-solo">En muy poco tiempo</p>
+        <h3>Consigue tus suculentas hoy</h3>
+        <h1>Suculentas</h1>
 
-        
+
+
       </div>
     </div>
   )
