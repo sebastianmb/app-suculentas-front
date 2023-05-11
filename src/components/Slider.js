@@ -1,5 +1,5 @@
 import React from 'react'
-import suculentas from '../assets/images/suculentas.png'
+import suculentas from '../assets/images/suculentas.jpg'
 
 const Slider = () => {
   return (
