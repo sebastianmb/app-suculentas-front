@@ -60,7 +60,7 @@ body {
 
 #menu ul {
   line-height: 50px;
-  width: 60%;
+  width: 90%;
   height: 50%;
   float: right;
 }
@@ -138,9 +138,8 @@ body {
 /*Adverstiment*/
 
 #adverstiment {
-  padding: 10px 40px;
+  padding: 10px;
   background-color: white;
-  border-radius: 15px;
   position: relative;
   height: 300px;
   line-height: 0.5;
@@ -168,6 +167,12 @@ body {
   height: 100%;
 }
 
+.img-pasos{
+  
+  width: 100%;
+  height: 60%;
+}
+
 
 .img-paso {
   width: 60%;
@@ -179,7 +184,7 @@ body {
 
 .img-paso ul {
   margin: 5px;
-  width: 95%;
+  width: 100%;
   height: 100%;
   float: center;
 }
