@@ -241,10 +241,20 @@ body {
   height: 10%;
 }
 
-.seleccion div {
-  display: inline-block;
-  width: 40%;
-  height: 60%;
-  border: solid red;
-  
+#size-pot {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+    
+}
+
+.seleccion button{
+  width: 30%;
+  height: 100%;
+}
+
+.seleccion button img{
+  width: 100%;
+  height: inherit;
 }
