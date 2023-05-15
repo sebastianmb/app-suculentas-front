@@ -228,21 +228,31 @@ body {
  }
 
 .seleccion {
+  display: block;
   width: 50%;
-  height: 100%;
+  
   margin-top: 50px;
   float: right;
   
 }
 
 .seleccion span {
-  display: block;
-  text-align: center;
+  position: relative;
+  float: left;
+  background-color: rgb(0, 255, 255);
+  border-radius: 20px;
   height: 10%;
+  padding: 10px;
+  font-size: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+ 
 }
 
 #size-pot {
-  height: 50%;
+  position: absolute;
+  margin-top: 30px;
+  height: 45%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -250,6 +260,7 @@ body {
 }
 
 .seleccion button{
+  margin-top: 80px;
   width: 30%;
   height: 100%;
 }
