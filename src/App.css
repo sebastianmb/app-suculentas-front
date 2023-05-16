@@ -213,12 +213,14 @@ body {
   width: 95%;
   height: 95%;
   margin: 0px auto;
+  display: inline-block;
 }
 
 .mostrario {
   width: 50%;
   margin-top: 10px;
   float: left;
+  display: block;
  }
  .mostrario img{
  
@@ -228,11 +230,10 @@ body {
  }
 
 .seleccion {
-  display: block;
   width: 50%;
-  
   margin-top: 50px;
   float: right;
+  display: block;
   
 }
 
@@ -243,9 +244,11 @@ body {
   border-radius: 20px;
   height: 10%;
   padding: 10px;
-  font-size: 20px;
+  margin-left: 20px;
+  font-size: 16px;
   padding-left: 30px;
   padding-right: 30px;
+  text-transform: uppercase;
  
 }
 
@@ -268,4 +271,14 @@ body {
 .seleccion button img{
   width: 100%;
   height: inherit;
+}
+
+
+/*Commerce*/
+
+.mostrario div{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+ 
 }
