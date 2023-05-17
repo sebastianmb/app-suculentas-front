@@ -1,5 +1,5 @@
 import React from 'react'
-
+import CheckboxList from './CheckboxList';
 
 const Plantone = () => {
   return (
@@ -7,18 +7,7 @@ const Plantone = () => {
       <div className='center-suculentas'>
         <div className='mostrario'>
           <div>
-            <button>
-              1
-            </button>
-            <button>
-              2
-            </button>
-            <button>
-              3
-            </button>
-            <button>
-              4
-            </button>
+            <CheckboxList />
           </div>
         </div>
         <div className='seleccion'>
