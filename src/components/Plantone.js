@@ -1,5 +1,5 @@
 import React from 'react'
-import potgra from "../assets/images/potgra.svg";
+
 
 const Plantone = () => {
   return (
@@ -8,7 +8,7 @@ const Plantone = () => {
         <div className='mostrario'>
           <div>
             <button>
-              <img src={potgra}/>
+              1
             </button>
             <button>
               2
