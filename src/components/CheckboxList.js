@@ -5,9 +5,9 @@ class CheckboxList extends Component {
     super(props);
     this.state = {
       options: [
-        { id: 1, label: 'Opción 1', checked: false },
-        { id: 2, label: 'Opción 2', checked: false },
-        { id: 3, label: 'Opción 3', checked: false }
+        { id: 1, label: 'Opción 1', checked: false, quantity: 0 },
+        { id: 2, label: 'Opción 2', checked: false, quantity: 0 },
+        { id: 3, label: 'Opción 3', checked: false, quantity: 0 }
       ]
     };
   }
@@ -16,6 +16,14 @@ class CheckboxList extends Component {
     this.setState((prevState) => ({
       options: prevState.options.map((option) =>
         option.id === id ? { ...option, checked: !option.checked } : option
+      )
+    }));
+  };
+
+  handleQuantityChange = (id, quantity) => {
+    this.setState((prevState) => ({
+      options: prevState.options.map((option) =>
+        option.id === id ? { ...option, quantity: quantity } : option
       )
     }));
   };
@@ -33,6 +41,19 @@ class CheckboxList extends Component {
               />
               {option.label}
             </label>
+            {option.checked && (
+              <input
+                type="number"
+                min="0"
+                value={option.quantity}
+                onChange={(event) => this.handleQuantityChange(option.id, parseInt(event.target.value))}
+              />
+            )}
+            {option.checked && (
+              <div>
+                Cantidad: {option.quantity}
+              </div>
+            )}
           </div>
         ))}
       </div>
