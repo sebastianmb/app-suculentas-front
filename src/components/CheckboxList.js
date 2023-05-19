@@ -6,9 +6,12 @@ class CheckboxList extends Component {
     super(props);
     this.state = {
       options: [
-        { id: 1, label: 'Opción 1', checked: false, quantity: 0, Image: { suculenta } },
-        { id: 2, label: 'Opción 2', checked: false, quantity: 0, Image: { suculenta } },
-        { id: 3, label: 'Opción 3', checked: false, quantity: 0, Image: { suculenta } }
+        { id: 1, label: 'Opción 1', checked: false, quantity: 0, image: suculenta  },
+        { id: 2, label: 'Opción 2', checked: false, quantity: 0, image: suculenta  },
+        { id: 3, label: 'Opción 3', checked: false, quantity: 0, image: suculenta },
+        { id: 4, label: 'Opción 1', checked: false, quantity: 0, image: suculenta  },
+        { id: 5, label: 'Opción 2', checked: false, quantity: 0, image: suculenta  },
+        { id: 6, label: 'Opción 3', checked: false, quantity: 0, image: suculenta }
       ]
     };
   }
@@ -31,9 +34,9 @@ class CheckboxList extends Component {
 
   render() {
     return (
-      <div>
+      <div className='container-products'>
         {this.state.options.map((option) => (
-          <div key={option.id}>
+          <div key={option.id} className='item'>
             <img src={option.image} alt={option.label} />
             <label>
               <input

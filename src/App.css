@@ -15,7 +15,7 @@ body {
   width: 100%;
   background: white;
   border-bottom: 1px solid #ccc;
-  
+
 }
 
 .center {
@@ -42,7 +42,7 @@ body {
   height: 40px;
   margin-top: -9px;
   margin-right: -10px;
-  
+
 }
 
 #brand {
@@ -73,12 +73,13 @@ body {
   margin-right: 15px;
   text-align: center;
 }
+
 .clock-call {
   display: inline-block;
   list-style: none;
   height: 15px;
   margin-right: 5px;
-    
+
 }
 
 #menu a {
@@ -96,7 +97,7 @@ body {
 /*Slider*/
 .hero-banner-container {
   padding: 50px 40px;
-  background-color:white;
+  background-color: white;
   border-radius: 15px;
   position: relative;
   height: 400px;
@@ -107,7 +108,7 @@ body {
 
 .hero-banner-container .beats-solo {
   font-size: 20px;
-  
+
 }
 
 
@@ -115,7 +116,7 @@ body {
 .hero-banner-container h3 {
   font-size: 3rem;
   margin-top: 4px;
-  
+
 }
 
 .hero-banner-container h1 {
@@ -123,7 +124,7 @@ body {
   font-size: 6em;
   margin-left: -20px;
   text-transform: uppercase;
-  
+
 }
 
 .hero-banner-image {
@@ -161,14 +162,14 @@ body {
   margin-top: 5px;
 }
 
-.img-mosaico{
+.img-mosaico {
 
   width: 100%;
   height: 100%;
 }
 
-.img-pasos{
-  
+.img-pasos {
+
   width: 100%;
   height: 60%;
 }
@@ -222,20 +223,22 @@ body {
   margin-top: 10px;
   float: left;
   display: block;
- }
- .mostrario img{
- 
+}
+
+.mostrario img {
+  display: flex;
+  flex-direction: column;
   height: 90%;
   width: 50%;
-  align-content: center;
- }
+
+}
 
 .seleccion {
   width: 50%;
   margin-top: 30px;
   float: right;
   display: block;
-  
+
 }
 
 .seleccion span {
@@ -250,7 +253,7 @@ body {
   padding-left: 30px;
   padding-right: 30px;
   text-transform: uppercase;
- 
+
 }
 
 #size-pot {
@@ -260,16 +263,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-    
+
 }
 
-.seleccion button{
+.seleccion button {
   margin-top: 80px;
   width: 30%;
   height: 100%;
 }
 
-.seleccion button img{
+.seleccion button img {
   width: 100%;
   height: inherit;
 }
@@ -277,14 +280,28 @@ body {
 
 /*Commerce*/
 
-.mostrario div{
+.mostrario div {
   padding-top: 40px;
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 20px;
- 
 }
 
+.container-products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.item {
+  flex: 1;
+}
+
+.item img{
+  height: inherit;
+  width: 50px;
+}
 
 /*Footer*/
 .footer {
