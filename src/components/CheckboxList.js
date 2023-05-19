@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import suculenta from "../assets/images/example-sucu.jpg"
 
 class CheckboxList extends Component {
   constructor(props) {
     super(props);
     this.state = {
       options: [
-        { id: 1, label: 'Opción 1', checked: false, quantity: 0 },
-        { id: 2, label: 'Opción 2', checked: false, quantity: 0 },
-        { id: 3, label: 'Opción 3', checked: false, quantity: 0 }
+        { id: 1, label: 'Opción 1', checked: false, quantity: 0, Image: { suculenta } },
+        { id: 2, label: 'Opción 2', checked: false, quantity: 0, Image: { suculenta } },
+        { id: 3, label: 'Opción 3', checked: false, quantity: 0, Image: { suculenta } }
       ]
     };
   }
@@ -33,6 +34,7 @@ class CheckboxList extends Component {
       <div>
         {this.state.options.map((option) => (
           <div key={option.id}>
+            <img src={option.image} alt={option.label} />
             <label>
               <input
                 type="checkbox"
@@ -49,11 +51,7 @@ class CheckboxList extends Component {
                 onChange={(event) => this.handleQuantityChange(option.id, parseInt(event.target.value))}
               />
             )}
-            {option.checked && (
-              <div>
-                Cantidad: {option.quantity}
-              </div>
-            )}
+
           </div>
         ))}
       </div>
