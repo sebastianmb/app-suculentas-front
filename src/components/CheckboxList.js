@@ -1,20 +1,33 @@
 import React, { Component } from 'react';
 import suculenta from "../assets/images/example-sucu.jpg"
+import ConfirmButton from './ConfirmButton';
+
+
+
 
 class CheckboxList extends Component {
+
+
+
   constructor(props) {
     super(props);
     this.state = {
       options: [
-        { id: 1, label: 'Opción 1', checked: false, quantity: 0, image: suculenta  },
-        { id: 2, label: 'Opción 2', checked: false, quantity: 0, image: suculenta  },
+        { id: 1, label: 'Opción 1', checked: false, quantity: 0, image: suculenta },
+        { id: 2, label: 'Opción 2', checked: false, quantity: 0, image: suculenta },
         { id: 3, label: 'Opción 3', checked: false, quantity: 0, image: suculenta },
-        { id: 4, label: 'Opción 1', checked: false, quantity: 0, image: suculenta  },
-        { id: 5, label: 'Opción 2', checked: false, quantity: 0, image: suculenta  },
+        { id: 4, label: 'Opción 1', checked: false, quantity: 0, image: suculenta },
+        { id: 5, label: 'Opción 2', checked: false, quantity: 0, image: suculenta },
         { id: 6, label: 'Opción 3', checked: false, quantity: 0, image: suculenta }
-      ]
+      ],
+      cartItems: []
     };
   }
+  addToCart = (option) => {
+    this.setState((prevState) => ({
+      cartItems: [...prevState.cartItems, option],
+    }));
+  };
 
   handleCheckboxChange = (id) => {
     this.setState((prevState) => ({
@@ -52,6 +65,13 @@ class CheckboxList extends Component {
                 min="0"
                 value={option.quantity}
                 onChange={(event) => this.handleQuantityChange(option.id, parseInt(event.target.value))}
+              />
+            )}
+            {option.checked && (
+              <ConfirmButton
+                option={option.label}
+                addToCart={this.addToCart}
+
               />
             )}
 
