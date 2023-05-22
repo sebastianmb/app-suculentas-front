@@ -69,7 +69,7 @@ class CheckboxList extends Component {
             )}
             {option.checked && (
               <ConfirmButton
-                option={option.label}
+                option={option}
                 addToCart={this.addToCart}
 
               />
