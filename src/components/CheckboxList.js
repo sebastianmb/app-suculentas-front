@@ -1,22 +1,25 @@
 import React from 'react';
+import { useState } from 'react';
 import ConfirmButton from './ConfirmButton';
 
-const CheckboxList = ({ options, cartItems, addToCart }) => {
+
+
+const CheckboxList = ({ options: propOptions, cartItems, addToCart }) => {
+  const [options, setOptions] = useState(propOptions);
   const handleCheckboxChange = (id) => {
     const updatedOptions = options.map((option) =>
       option.id === id ? { ...option, checked: !option.checked } : option
     );
-    // Actualizar el estado o realizar cualquier otra operación necesaria
-    console.log(updatedOptions);
-    
+    // Actualizar el estado options con los valores actualizados
+    setOptions(updatedOptions);
   };
 
   const handleQuantityChange = (id, quantity) => {
     const qupdatedOptions = options.map((option) =>
       option.id === id ? { ...option, quantity: quantity } : option
     );
-    console.log(qupdatedOptions);
-    
+    setOptions(qupdatedOptions);
+
   };
 
   if (!options) {
@@ -26,6 +29,7 @@ const CheckboxList = ({ options, cartItems, addToCart }) => {
   return (
     <div className='container-products'>
       {options.map((option) => (
+
         <div key={option.id} className='item'>
           <img src={option.image} alt={option.label} />
           <label>
@@ -43,6 +47,7 @@ const CheckboxList = ({ options, cartItems, addToCart }) => {
               value={option.quantity}
               onChange={(event) => handleQuantityChange(option.id, parseInt(event.target.value))}
             />
+
           )}
           {option.checked && (
             <ConfirmButton

@@ -79,14 +79,14 @@ const handleConfirm = () => {
           </div>
         </div>
 
-
+      
       </div>
 
       <div id='suculentas'>
         <div className='center-suculentas'>
           <div className='mostrario'>
             <div >
-            <CheckboxList
+              <CheckboxList
                 options={options}
                 cartItems={cartItems}
                 addToCart={addToCart} />
@@ -101,13 +101,13 @@ const handleConfirm = () => {
           </div>
         </div>
 
-
+      
       </div>
       <div id='suculentas'>
         <div className='center-suculentas'>
           <div className='mostrario'>
             <div >
-            <CheckboxList
+              <CheckboxList
                 options={options}
                 cartItems={cartItems}
                 addToCart={addToCart} />
@@ -122,9 +122,10 @@ const handleConfirm = () => {
           </div>
         </div>
 
-
+      
       </div>
 
+      
       {/*Commerce*/}
 
 
