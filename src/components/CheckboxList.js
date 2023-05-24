@@ -4,7 +4,6 @@ import ConfirmButton from './ConfirmButton';
 
 
 
-
 class CheckboxList extends Component {
 
 
@@ -73,11 +72,15 @@ class CheckboxList extends Component {
                 addToCart={this.addToCart}
 
               />
+              
             )}
-
+            
           </div>
         ))}
+        
+
       </div>
+
     );
   }
 }

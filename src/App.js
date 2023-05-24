@@ -6,45 +6,96 @@ import Header from './components/Header';
 import Slider from './components/Slider';
 import Adverstiment from './components/Adverstiment';
 import Pot from './components/Pot';
-import Plantone from './components/Plantone';
-import Planttwo from './components/Planttwo';
-import Plantthree from './components/Plantthree';
 import Footer from './components/Footer'
+import CheckboxList from './components/CheckboxList';
+import ConfirmButton from './components/ConfirmButton';
 
+const handleConfirm = () => {
+  // Lógica a ejecutar cuando se confirma
+  console.log('Confirmado');
+};
 
 function App() {
   return (
     <div className="App">
       {/*Header*/}
-      <Header/>
+      <Header />
 
 
       {/*Slider*/}
-      <Slider/>
+      <Slider />
 
       {/*Home*/}
-      <Adverstiment/>
+      <Adverstiment />
 
 
       {/*Pot*/}
-      <Pot/>
+      <Pot />
+      {/*plants 1- 2- 3*/}
+      <div id='suculentas'>
+        <div className='center-suculentas'>
+          <div className='mostrario'>
+            <div >
+              <CheckboxList />
+            </div>
+          </div>
+          <div className='seleccion'>
+            <span className='suculentas-base'><b>Seleccione suculentas base</b></span>
+            <div>
+              <h3>Confirmación</h3>
+              <ConfirmButton message="¿Estás seguro?" onConfirm={handleConfirm} />
+            </div>
+          </div>
+        </div>
 
-      {/*Selection1*/}
-      <Plantone/>
 
-      {/*Selection2*/}
-      <Planttwo/>
+      </div>
 
-      {/*Selection3*/}
-      <Plantthree/>
+      <div id='suculentas'>
+      <div className='center-suculentas'>
+        <div className='mostrario'>
+          <div >
+            <CheckboxList />
+          </div>
+        </div>
+        <div className='seleccion'>
+          <span className='suculentas-base'><b>Seleccione suculentas base</b></span>
+          <div>
+            <h3>Confirmación</h3>
+            <ConfirmButton message="¿Estás seguro?" onConfirm={handleConfirm} />
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div id='suculentas'>
+      <div className='center-suculentas'>
+        <div className='mostrario'>
+          <div >
+            <CheckboxList />
+          </div>
+        </div>
+        <div className='seleccion'>
+          <span className='suculentas-base'><b>Seleccione suculentas base</b></span>
+          <div>
+            <h3>Confirmación</h3>
+            <ConfirmButton message="¿Estás seguro?" onConfirm={handleConfirm} />
+          </div>
+        </div>
+      </div>
+
+
+    </div>
 
       {/*Commerce*/}
-      
+
 
       {/*Footer*/}
-      <Footer/>
+      <Footer />
 
-      
+
+
     </div>
   );
 }
