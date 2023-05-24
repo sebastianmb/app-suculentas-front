@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './App.css';
 
 
@@ -9,13 +10,40 @@ import Pot from './components/Pot';
 import Footer from './components/Footer'
 import CheckboxList from './components/CheckboxList';
 import ConfirmButton from './components/ConfirmButton';
+//Imagen
+import suculenta from "./assets/images/example-sucu.jpg"
+
+
+
+function App() {
+
+  // Ajuste Cart
+const [cartItems, setCartItems] = useState([]);
+
+const addToCart = (option) => {
+  setCartItems([...cartItems, option]);
+};
+
+const options = [
+  { id: 1, label: 'Opción 1', checked: false, quantity: 0, image: suculenta },
+  { id: 2, label: 'Opción 2', checked: false, quantity: 0, image: suculenta },
+  { id: 3, label: 'Opción 3', checked: false, quantity: 0, image: suculenta },
+  { id: 4, label: 'Opción 1', checked: false, quantity: 0, image: suculenta },
+  { id: 5, label: 'Opción 2', checked: false, quantity: 0, image: suculenta },
+  { id: 6, label: 'Opción 3', checked: false, quantity: 0, image: suculenta }
+];
+
+
+
 
 const handleConfirm = () => {
   // Lógica a ejecutar cuando se confirma
   console.log('Confirmado');
 };
 
-function App() {
+
+
+
   return (
     <div className="App">
       {/*Header*/}
@@ -36,7 +64,10 @@ function App() {
         <div className='center-suculentas'>
           <div className='mostrario'>
             <div >
-              <CheckboxList />
+              <CheckboxList
+                options={options}
+                cartItems={cartItems}
+                addToCart={addToCart} />
             </div>
           </div>
           <div className='seleccion'>
@@ -52,41 +83,47 @@ function App() {
       </div>
 
       <div id='suculentas'>
-      <div className='center-suculentas'>
-        <div className='mostrario'>
-          <div >
-            <CheckboxList />
+        <div className='center-suculentas'>
+          <div className='mostrario'>
+            <div >
+            <CheckboxList
+                options={options}
+                cartItems={cartItems}
+                addToCart={addToCart} />
+            </div>
+          </div>
+          <div className='seleccion'>
+            <span className='suculentas-base'><b>Seleccione suculentas base</b></span>
+            <div>
+              <h3>Confirmación</h3>
+              <ConfirmButton message="¿Estás seguro?" onConfirm={handleConfirm} />
+            </div>
           </div>
         </div>
-        <div className='seleccion'>
-          <span className='suculentas-base'><b>Seleccione suculentas base</b></span>
-          <div>
-            <h3>Confirmación</h3>
-            <ConfirmButton message="¿Estás seguro?" onConfirm={handleConfirm} />
-          </div>
-        </div>
+
+
       </div>
-
-
-    </div>
-    <div id='suculentas'>
-      <div className='center-suculentas'>
-        <div className='mostrario'>
-          <div >
-            <CheckboxList />
+      <div id='suculentas'>
+        <div className='center-suculentas'>
+          <div className='mostrario'>
+            <div >
+            <CheckboxList
+                options={options}
+                cartItems={cartItems}
+                addToCart={addToCart} />
+            </div>
+          </div>
+          <div className='seleccion'>
+            <span className='suculentas-base'><b>Seleccione suculentas base</b></span>
+            <div>
+              <h3>Confirmación</h3>
+              <ConfirmButton message="¿Estás seguro?" onConfirm={handleConfirm} />
+            </div>
           </div>
         </div>
-        <div className='seleccion'>
-          <span className='suculentas-base'><b>Seleccione suculentas base</b></span>
-          <div>
-            <h3>Confirmación</h3>
-            <ConfirmButton message="¿Estás seguro?" onConfirm={handleConfirm} />
-          </div>
-        </div>
+
+
       </div>
-
-
-    </div>
 
       {/*Commerce*/}
 

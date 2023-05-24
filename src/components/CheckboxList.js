@@ -1,32 +1,77 @@
-import React, { Component } from 'react';
-import suculenta from "../assets/images/example-sucu.jpg"
+import React from 'react';
 import ConfirmButton from './ConfirmButton';
 
+const CheckboxList = ({ options, cartItems, addToCart }) => {
+  const handleCheckboxChange = (id) => {
+    const updatedOptions = options.map((option) =>
+      option.id === id ? { ...option, checked: !option.checked } : option
+    );
+    // Actualizar el estado o realizar cualquier otra operación necesaria
+    console.log(updatedOptions);
+    
+  };
+
+  const handleQuantityChange = (id, quantity) => {
+    const qupdatedOptions = options.map((option) =>
+      option.id === id ? { ...option, quantity: quantity } : option
+    );
+    console.log(qupdatedOptions);
+    
+  };
+
+  if (!options) {
+    return <div>No hay opciones disponibles.</div>;
+  }
+
+  return (
+    <div className='container-products'>
+      {options.map((option) => (
+        <div key={option.id} className='item'>
+          <img src={option.image} alt={option.label} />
+          <label>
+            <input
+              type="checkbox"
+              checked={option.checked}
+              onChange={() => handleCheckboxChange(option.id)}
+            />
+            {option.label}
+          </label>
+          {option.checked && (
+            <input
+              type="number"
+              min="0"
+              value={option.quantity}
+              onChange={(event) => handleQuantityChange(option.id, parseInt(event.target.value))}
+            />
+          )}
+          {option.checked && (
+            <ConfirmButton
+              option={option}
+              addToCart={addToCart}
+            />
+          )}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default CheckboxList;
+
+
+
+
+
+
+
+/*CheckboxList antiguo
 
 
 class CheckboxList extends Component {
 
 
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      options: [
-        { id: 1, label: 'Opción 1', checked: false, quantity: 0, image: suculenta },
-        { id: 2, label: 'Opción 2', checked: false, quantity: 0, image: suculenta },
-        { id: 3, label: 'Opción 3', checked: false, quantity: 0, image: suculenta },
-        { id: 4, label: 'Opción 1', checked: false, quantity: 0, image: suculenta },
-        { id: 5, label: 'Opción 2', checked: false, quantity: 0, image: suculenta },
-        { id: 6, label: 'Opción 3', checked: false, quantity: 0, image: suculenta }
-      ],
-      cartItems: []
-    };
-  }
-  addToCart = (option) => {
-    this.setState((prevState) => ({
-      cartItems: [...prevState.cartItems, option],
-    }));
-  };
+  
 
   handleCheckboxChange = (id) => {
     this.setState((prevState) => ({
@@ -86,3 +131,5 @@ class CheckboxList extends Component {
 }
 
 export default CheckboxList;
+
+*/
