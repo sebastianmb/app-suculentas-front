@@ -10,6 +10,7 @@ import Pot from './components/Pot';
 import Footer from './components/Footer'
 import CheckboxList from './components/CheckboxList';
 import ConfirmButton from './components/ConfirmButton';
+
 //Imagen
 import suculenta from "./assets/images/example-sucu.jpg"
 
@@ -127,7 +128,7 @@ const handleConfirm = () => {
 
       
       {/*Commerce*/}
-
+      
 
       {/*Footer*/}
       <Footer />

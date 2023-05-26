@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ConfirmButton = ({ message, onConfirm, addToCart, option }) => {
+const ConfirmButton = ({ message, onConfirm, addToCart, option, selectedOptions }) => {
   const [confirming, setConfirming] = useState(false);
 
   const handleClick = () => {
@@ -9,7 +9,8 @@ const ConfirmButton = ({ message, onConfirm, addToCart, option }) => {
     } else {
       setConfirming(true);
       addToCart(option);
-      console.log(option)
+      console.log(option);
+      console.log(selectedOptions);
     }
   };
 
