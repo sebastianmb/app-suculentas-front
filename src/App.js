@@ -10,7 +10,7 @@ import Pot from './components/Pot';
 import Footer from './components/Footer'
 import CheckboxList from './components/CheckboxList';
 import ConfirmButton from './components/ConfirmButton';
-
+import Cart from './components/Cart';
 //Imagen
 import suculenta from "./assets/images/example-sucu.jpg"
 
@@ -18,29 +18,32 @@ import suculenta from "./assets/images/example-sucu.jpg"
 
 function App() {
 
+ 
+
+
   // Ajuste Cart
-const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
 
-const addToCart = (option) => {
-  setCartItems([...cartItems, option]);
-};
+  const addToCart = (option) => {
+    setCartItems([...cartItems, option]);
+  };
 
-const options = [
-  { id: 1, label: 'Opción 1', checked: false, quantity: 0, image: suculenta },
-  { id: 2, label: 'Opción 2', checked: false, quantity: 0, image: suculenta },
-  { id: 3, label: 'Opción 3', checked: false, quantity: 0, image: suculenta },
-  { id: 4, label: 'Opción 1', checked: false, quantity: 0, image: suculenta },
-  { id: 5, label: 'Opción 2', checked: false, quantity: 0, image: suculenta },
-  { id: 6, label: 'Opción 3', checked: false, quantity: 0, image: suculenta }
-];
-
-
+  const options = [
+    { id: 1, label: 'Opción 1', checked: false, quantity: 0, image: suculenta },
+    { id: 2, label: 'Opción 2', checked: false, quantity: 0, image: suculenta },
+    { id: 3, label: 'Opción 3', checked: false, quantity: 0, image: suculenta },
+    { id: 4, label: 'Opción 1', checked: false, quantity: 0, image: suculenta },
+    { id: 5, label: 'Opción 2', checked: false, quantity: 0, image: suculenta },
+    { id: 6, label: 'Opción 3', checked: false, quantity: 0, image: suculenta }
+  ];
 
 
-const handleConfirm = () => {
-  // Lógica a ejecutar cuando se confirma
-  console.log('Confirmado');
-};
+
+
+  const handleConfirm = () => {
+    // Lógica a ejecutar cuando se confirma
+    console.log('Confirmado');
+  };
 
 
 
@@ -75,12 +78,12 @@ const handleConfirm = () => {
             <span className='suculentas-base'><b>Seleccione suculentas base</b></span>
             <div>
               <h3>Confirmación</h3>
-              <ConfirmButton message="¿Estás seguro?" onConfirm={handleConfirm} />
+              <ConfirmButton  message="¿Estás seguro?" onConfirm={handleConfirm} />
             </div>
           </div>
         </div>
 
-      
+
       </div>
 
       <div id='suculentas'>
@@ -102,7 +105,7 @@ const handleConfirm = () => {
           </div>
         </div>
 
-      
+
       </div>
       <div id='suculentas'>
         <div className='center-suculentas'>
@@ -123,17 +126,17 @@ const handleConfirm = () => {
           </div>
         </div>
 
-      
+
       </div>
 
-      
+
       {/*Commerce*/}
-      
+
 
       {/*Footer*/}
       <Footer />
-
-
+     
+      <Cart/>
 
     </div>
   );

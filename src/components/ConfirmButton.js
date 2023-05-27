@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ConfirmButton = ({ message, onConfirm, addToCart, option, selectedOptions }) => {
+const ConfirmButton = ({ message, onConfirm, addToCart, option, selectedOptions,sendDataParent }) => {
   const [confirming, setConfirming] = useState(false);
 
   const handleClick = () => {
@@ -11,6 +11,8 @@ const ConfirmButton = ({ message, onConfirm, addToCart, option, selectedOptions 
       addToCart(option);
       console.log(option);
       console.log(selectedOptions);
+      const data =selectedOptions;
+      sendDataParent(data);
     }
   };
 
@@ -18,6 +20,7 @@ const ConfirmButton = ({ message, onConfirm, addToCart, option, selectedOptions 
     <button onClick={handleClick}>
       {confirming ? message : 'Confirmar'}
     </button>
+    
   );
 };
 
