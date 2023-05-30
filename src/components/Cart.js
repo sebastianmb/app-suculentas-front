@@ -1,20 +1,23 @@
-import React, { useState } from 'react';
-import ConfirmButton from './ConfirmButton';
+// Cart.js
 
-const Cart = () => {
-  const [dataFromChild, setDataFromChild] = useState('');
+import React from 'react';
 
-  const handleDataFromChild = (data) => {
-    setDataFromChild(data);
-    console.log(data)
-  };
-
+const Cart = ({ cartItems, removeFromCart }) => {
+  if (!cartItems) {
+    return <div>No hay elementos en el carrito.</div>;
+  }
   return (
     <div>
-    <h2>Componente Padre</h2>
-    <p>Datos del componente hijo</p>
-    <ConfirmButton sendDataToParent={handleDataFromChild} />
-  </div>
+      <h2>Cart</h2>
+      <ul>
+        {cartItems.map((item) => (
+          <li key={item.id}>
+            {item.name} - ${item.price}
+            <button onClick={() => removeFromCart(item.id)}>Remove</button>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
