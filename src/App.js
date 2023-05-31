@@ -30,11 +30,7 @@ function App() {
     setCartItems(updatedCartItems);
   };
 
-  const [quantitys, setQuantitys] = useState([]);
-  const addToQuantity = (product) => {
-    
-    product.id === id ? { ...product, quantity: product.quantity } : product
-  };
+  
  
 
 
@@ -87,7 +83,7 @@ function App() {
         <div className='center-suculentas'>
           <div className='mostrario'>
             <Products addToCart={addToCart}
-                      addToQuantity={addToQuantity}/>
+                      />
           </div>
           <div className='seleccion'>
             <span className='suculentas-base'><b>Seleccione suculentas base</b></span>

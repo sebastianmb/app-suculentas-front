@@ -1,28 +1,33 @@
-// ProductList.js
-
-import React from 'react';
-//Imagen
+import React, { useState } from 'react';
 import suculenta from "../assets/images/example-sucu.jpg"
 
-const ProductList = ({ addToCart, addToQuantity }) => {
-    
+const ProductList = ({ addToCart }) => {
+    const [selectedProducts, setSelectedProducts] = useState({});
+
     const products = [
-        { id: 1, name: 'Product 1', price: 10,quantity:0, image: suculenta },
-        { id: 2, name: 'Product 2', price: 15,quantity:0, image: suculenta },
-        { id: 3, name: 'Product 3', price: 20,quantity:0, image: suculenta },
+        { id: 1, name: 'Product 1', price: 10, quantity: 0, image: suculenta },
+        { id: 2, name: 'Product 2', price: 15, quantity: 0, image: suculenta },
+        { id: 3, name: 'Product 3', price: 20, quantity: 0, image: suculenta },
     ];
 
-    const handleAddToCart = (product) => {
-        addToCart(product);
+    const handleQuantityChange = (productId, quantity) => {
+        setSelectedProducts((prevSelectedProducts) => ({
+            ...prevSelectedProducts,
+            [productId]: quantity,
+        }));
     };
 
-    const handleQuantityChange = (product) => {
-        addToQuantity(product)
-        
+    const handleAddToCart = (product) => {
+        const quantity = selectedProducts[product.id] || 0;
+        addToCart({ ...product, quantity });
+        setSelectedProducts((prevSelectedProducts) => ({
+            ...prevSelectedProducts,
+            [product.id]: 0,
+        }));
     };
 
     return (
-        <div >
+        <div>
             <h2>Product List</h2>
             <ul className='container-products'>
                 {products.map((product) => (
@@ -32,8 +37,10 @@ const ProductList = ({ addToCart, addToQuantity }) => {
                         <input
                             type="number"
                             min="0"
-                            value={product.quantity}
-                            onChange={(event) => handleQuantityChange(product.id, parseInt(event.target.value))}
+                            value={selectedProducts[product.id] || 0}
+                            onChange={(event) =>
+                                handleQuantityChange(product.id, parseInt(event.target.value))
+                            }
                         />
                         <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
                     </li>
