@@ -72,8 +72,9 @@ function App() {
           </div>
         </div>
 
-        <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
+        
       </div>
+      <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
 
       
 
@@ -83,7 +84,7 @@ function App() {
       {/*Footer*/}
       <Footer />
      
-      <Cart/>
+      
 
     </div>
   );
