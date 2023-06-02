@@ -311,3 +311,69 @@ body {
   height: 60px;
   background-color: #71ffff;
 }
+
+/* Estilos CSS para el carrito */
+.cart-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.cart-title {
+  color: #333333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product-list {
+  list-style: none;
+  padding: 0;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.product-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.product-info {
+  flex-grow: 1;
+}
+
+.product-name {
+  color: #333333;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-quantity {
+  color: #333333;
+  font-size: 14px;
+}
+
+.product-price {
+  color: #333333;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.remove-button {
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
