@@ -54,7 +54,7 @@ function App() {
 
 
       {/*Pot*/}
-      <Pot />
+      <Pot addToCart={addToCart}/>
       {/*plants 1- 2- 3*/}
      
       <div id='suculentas'>
