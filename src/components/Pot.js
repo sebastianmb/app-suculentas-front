@@ -8,9 +8,9 @@ const Pot = ({ addToCart }) => {
   ;
 
   const products = [
-    { id: 1, name: 'small', price: 45, image: potpeq },
-    { id: 2, name: 'medium', price: 60, image: potmed },
-    { id: 3, name: 'large', price: 80, image: potgra },
+    { id: 1, name: 'small', price: 45, quantity:1, image: potpeq },
+    { id: 2, name: 'medium', price: 60, quantity:1, image: potmed },
+    { id: 3, name: 'large', price: 80, quantity:1, image: potgra },
   ];
 
   const handleAddToCart = (product) => {
@@ -21,13 +21,13 @@ const Pot = ({ addToCart }) => {
     return (
       <div id='suculentas'>
         <div className='center-suculentas'>
-          <div className='mostrario'>
+          <div className='mostrario-pot'>
             <img src={pot} alt='matera' className='' />
           </div>
 
-          <div className='seleccion'>
+          <div className='seleccion-pot'>
             <span><b>Seleccione el tamaño de matera</b></span>
-            <div id='size-pot'>
+            <div className='size-pot'>
               {products.map((product) => (
                 <button key={product.id} onClick={() => handleAddToCart(product)}>
                   <img src={product.image} alt={product.labe} />

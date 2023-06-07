@@ -43,7 +43,7 @@ function App() {
     <div className="App">
       {/*Header*/}
       <Header />
-      <Navbar cartItemCount={cartItems.length} />
+      
 
 
       {/*Slider*/}
