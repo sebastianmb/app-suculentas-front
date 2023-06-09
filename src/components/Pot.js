@@ -29,7 +29,7 @@ const Pot = ({ addToCart }) => {
             <span><b>Seleccione el tamaño de matera</b></span>
             <div className='size-pot'>
               {products.map((product) => (
-                <button key={product.id} onClick={() => handleAddToCart(product)}>
+                <button className='btn-pot' key={product.id} onClick={() => handleAddToCart(product)}>
                   <img src={product.image} alt={product.labe} />
                 </button>
 

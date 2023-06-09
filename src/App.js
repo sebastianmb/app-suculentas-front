@@ -57,7 +57,7 @@ function App() {
       <Pot addToCart={addToCart}/>
       {/*plants 1- 2- 3*/}
      
-      <div id='suculentas'>
+      <div id='suculentas-buy'>
         <div className='center-suculentas'>
           <div className='mostrario'>
             <Products addToCart={addToCart}

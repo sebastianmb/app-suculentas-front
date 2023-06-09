@@ -8,6 +8,10 @@ const ProductList = ({ addToCart }) => {
         { id: 1, name: 'Product 1', price: 10, quantity: 0, image: suculenta },
         { id: 2, name: 'Product 2', price: 15, quantity: 0, image: suculenta },
         { id: 3, name: 'Product 3', price: 20, quantity: 0, image: suculenta },
+        { id: 4, name: 'Product 1', price: 10, quantity: 0, image: suculenta },     
+        { id: 5, name: 'Product 2', price: 15, quantity: 0, image: suculenta },
+        { id: 6, name: 'Product 3', price: 20, quantity: 0, image: suculenta },
+        
     ];
 
     const handleQuantityChange = (productId, quantity) => {
@@ -28,7 +32,7 @@ const ProductList = ({ addToCart }) => {
 
     return (
         <div>
-            <h2>Product List</h2>
+            
             <ul className='container-products'>
                 {products.map((product) => (
                     <li key={product.id} className='item'>

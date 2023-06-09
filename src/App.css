@@ -209,6 +209,15 @@ body {
   border-top: solid #444;
 
 }
+#suculentas-buy {
+  background-color: white;
+  position: relative;
+  height: 800px;
+  width: 100%;
+  border-top: solid #444;
+
+}
+
 
 .center-suculentas {
   width: 95%;
@@ -225,11 +234,11 @@ body {
   display: relative;
 }
 .mostrario {
-  width: 50%;
+  width: 65%;
   height: 100%;
   margin-top: 10px;
   float: left;
-  display: relative;
+  position: relative;
   
 }
 
@@ -249,12 +258,14 @@ body {
 }
 
 .seleccion {
-  width: 50%;
+  width: 35%;
   margin-top: 30px;
   float: right;
   display: block;
 
 }
+
+
 
 .seleccion span {
   position: relative;
@@ -296,6 +307,20 @@ body {
   justify-content: space-evenly;
 
 }
+.btn-pot :hover  {
+  color: #ffffff;
+  background: rgb(76, 154, 154);
+  border: 1px solid rgb(76, 154, 154);
+  text-shadow: 0 0 5px #ffffff,
+              0 0 10px #ffffff,
+              0 0 20px #ffffff;
+  box-shadow: 0 0 5px rgb(76, 154, 154),
+              0 0 20px rgb(76, 154, 154),
+              0 0 50px rgb(76, 154, 154),
+              0 0 100px rgb(0, 128, 128);
+}
+
+
 
 .size-pot img{
  
@@ -328,18 +353,28 @@ body {
 
 .container-products {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  width: 100%;
+
 }
 
 .item {
-  flex: 1;
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  list-style-type: none;
+  margin: 10px;
 }
 
-.item img{
-  height: inherit;
-  width: 50px;
+.item img {
+ 
+  width: 100px;
+
 }
 
 /*Footer*/
