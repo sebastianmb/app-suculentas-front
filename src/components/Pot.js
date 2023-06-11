@@ -8,9 +8,9 @@ const Pot = ({ addToCart }) => {
   ;
 
   const products = [
-    { id: 1, name: 'small', price: 45, quantity:1, image: potpeq },
-    { id: 2, name: 'medium', price: 60, quantity:1, image: potmed },
-    { id: 3, name: 'large', price: 80, quantity:1, image: potgra },
+    { id: 11, name: 'small', price: 45, quantity:1, image: potpeq },
+    { id: 12, name: 'medium', price: 60, quantity:1, image: potmed },
+    { id: 13, name: 'large', price: 80, quantity:1, image: potgra },
   ];
 
   const handleAddToCart = (product) => {

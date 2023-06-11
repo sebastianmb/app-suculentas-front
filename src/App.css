@@ -212,7 +212,7 @@ body {
 #suculentas-buy {
   background-color: white;
   position: relative;
-  height: 800px;
+  height: 700px;
   width: 100%;
   border-top: solid #444;
 
@@ -234,7 +234,7 @@ body {
   display: relative;
 }
 .mostrario {
-  width: 65%;
+  width: 55%;
   height: 100%;
   margin-top: 10px;
   float: left;
@@ -258,10 +258,11 @@ body {
 }
 
 .seleccion {
-  width: 35%;
+  width: 45%;
   margin-top: 30px;
   float: right;
-  display: block;
+  display: flex;
+  flex-direction: column;
 
 }
 
