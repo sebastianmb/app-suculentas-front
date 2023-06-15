@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-
+// Datos
+import DataProvider from './components/context/DataContext';
 
 //Components
 import Header from './components/Header';
@@ -36,6 +37,7 @@ function App() {
 
 
   return (
+    <DataProvider>
     <div className="App">
       {/*Header*/}
       <Header />
@@ -130,6 +132,8 @@ function App() {
 
 
     </div>
+
+    </DataProvider>
   );
 }
 

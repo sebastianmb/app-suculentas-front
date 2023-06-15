@@ -1,5 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import suculenta from "../assets/images/example-sucu.jpg"
+import { dataContext } from './context/DataContext';
+
+
+
 
 const ProductList = ({ addToCart }) => {
     const [selectedProducts, setSelectedProducts] = useState({});
@@ -13,6 +17,9 @@ const ProductList = ({ addToCart }) => {
         { id: 6, name: 'Product 3', price: 20, quantity: 0, image: suculenta },
         
     ];
+
+    const productsv= useContext(dataContext);
+    
 
     const handleQuantityChange = (productId, quantity) => {
         setSelectedProducts((prevSelectedProducts) => ({

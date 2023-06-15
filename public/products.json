@@ -1,0 +1,14 @@
+{"products":[
+    { "id": 1, "category":"suculenta", "name": "Product 1", "price": 10, "quantity": 0, "image": "https://i0.wp.com/wokii.com/wp-content/uploads/2021/08/suculenta-cactacea-scaled.jpg?fit=2560%2C1707&ssl=1" },
+    { "id": 2, "category":"suculenta","name": "Product 2", "price": 15, "quantity": 0, "image": "https://i0.wp.com/wokii.com/wp-content/uploads/2021/08/suculenta-cactacea-scaled.jpg?fit=2560%2C1707&ssl=1" },
+    { "id": 3, "category":"suculenta","name": "Product 3", "price": 20, "quantity": 0, "image": "https://i0.wp.com/wokii.com/wp-content/uploads/2021/08/suculenta-cactacea-scaled.jpg?fit=2560%2C1707&ssl=1" },
+    { "id": 4, "category":"suculenta","name": "Product 4", "price": 30, "quantity": 0, "image": "https://i0.wp.com/wokii.com/wp-content/uploads/2021/08/suculenta-cactacea-scaled.jpg?fit=2560%2C1707&ssl=1" },
+    { "id": 5, "category":"suculenta","name": "Product 5", "price": 40, "quantity": 0, "image": "https://i0.wp.com/wokii.com/wp-content/uploads/2021/08/suculenta-cactacea-scaled.jpg?fit=2560%2C1707&ssl=1" },
+    { "id": 6, "category":"suculenta","name": "Product 6", "price": 50, "quantity": 0, "image": "https://i0.wp.com/wokii.com/wp-content/uploads/2021/08/suculenta-cactacea-scaled.jpg?fit=2560%2C1707&ssl=1" },
+    { "id": 11, "category":"pot","name": "small", "price": 45, "quantity":1, "image": "potpeq" },
+    { "id": 12, "category":"pot","name": "medium", "price": 60, "quantity":1, "image": "potmed" },
+    { "id": 13, "category":"pot","name": "large", "price": 80, "quantity":1, "image": "potgra" }
+   
+   
+]
+}
