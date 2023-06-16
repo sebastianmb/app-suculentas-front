@@ -8,17 +8,11 @@ import { dataContext } from './context/DataContext';
 const ProductList = ({ addToCart }) => {
     const [selectedProducts, setSelectedProducts] = useState({});
 
-    const products = [
-        { id: 1, name: 'Product 1', price: 10, quantity: 0, image: suculenta },
-        { id: 2, name: 'Product 2', price: 15, quantity: 0, image: suculenta },
-        { id: 3, name: 'Product 3', price: 20, quantity: 0, image: suculenta },
-        { id: 4, name: 'Product 1', price: 10, quantity: 0, image: suculenta },     
-        { id: 5, name: 'Product 2', price: 15, quantity: 0, image: suculenta },
-        { id: 6, name: 'Product 3', price: 20, quantity: 0, image: suculenta },
-        
-    ];
 
-    const productsv= useContext(dataContext);
+    const {data}= useContext(dataContext);
+
+    
+
     
 
     const handleQuantityChange = (productId, quantity) => {
@@ -29,19 +23,23 @@ const ProductList = ({ addToCart }) => {
     };
 
     const handleAddToCart = (product) => {
+        console.log({data});
         const quantity = selectedProducts[product.id] || 0;
         addToCart({ ...product, quantity });
         setSelectedProducts((prevSelectedProducts) => ({
             ...prevSelectedProducts,
             [product.id]: 0,
+
+        
         }));
     };
 
     return (
         <div>
             
+            
             <ul className='container-products'>
-                {products.map((product) => (
+                {data.map((product) => (
                     <li key={product.id} className='item'>
                         <img src={product.image} alt={product.label} />
                         {product.name} - ${product.price}
