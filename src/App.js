@@ -13,7 +13,7 @@ import Footer from './components/Footer'
 
 import Cart from './components/Cart';
 import Products from './components/Products'
-import Navbar from './components/Navbar';
+
 
 
 
