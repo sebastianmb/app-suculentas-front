@@ -1,14 +1,11 @@
 import React from 'react';
-import { PayPalButton } from "react-paypal-button-v2";
+
 
 const Cart = ({ cartItems, removeFromCart }) => {
   if (!cartItems || cartItems.length === 0) {
     return <div>No hay elementos en el carrito.</div>;
   }
-  const handlePaymentSuccess = (details, data) => {
-    // Lógica a ejecutar cuando el pago se completa correctamente
-    console.log("Pago completado:", details);
-  };
+  
   
   return (
     <div className="cart-container" >
@@ -43,12 +40,6 @@ const Cart = ({ cartItems, removeFromCart }) => {
           </li>
         ))}
       </ul>
-
-      <PayPalButton
-      amount="10.00"
-      currency="USD"
-      onSuccess={handlePaymentSuccess}
-    />
     </div>
   );
 };
