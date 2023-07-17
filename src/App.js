@@ -15,13 +15,13 @@ import Cart from './components/Cart';
 import Products from './components/Products'
 import PaymentForm from './components/PaymentForm';
 
-import PaymentBrick from './components/PaymentBrick';
+
 
 
 
 
 function App() {
-  const preferenceId = "...>";
+  
   const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (product) => {
@@ -45,7 +45,7 @@ function App() {
         <Header />
 
 
-        <PaymentForm/>
+
         {/*Slider*/}
         <Slider />
 
@@ -120,11 +120,13 @@ function App() {
 
 
         </div>
-        <div>
-          {/* Otros componentes y contenido de tu aplicación */}
-          <PaymentBrick preferenceId={preferenceId} />
-        </div>
-        <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
+
+        {cartItems.length > 0 && (
+          <>
+            <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
+            <PaymentForm />
+          </>
+        )}
 
 
 

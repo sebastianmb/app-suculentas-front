@@ -1,5 +1,5 @@
 import React, { useState,useContext } from 'react';
-import suculenta from "../assets/images/example-sucu.jpg"
+//import suculenta from "../assets/images/example-sucu.jpg"
 import { dataContext } from './context/DataContext';
 
 
