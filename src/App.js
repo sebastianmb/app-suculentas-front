@@ -13,6 +13,7 @@ import Footer from './components/Footer'
 
 import Cart from './components/Cart';
 import Products from './components/Products'
+import PaymentForm from './components/PaymentForm';
 
 import PaymentBrick from './components/PaymentBrick';
 
@@ -44,7 +45,7 @@ function App() {
         <Header />
 
 
-
+        <PaymentForm/>
         {/*Slider*/}
         <Slider />
 
