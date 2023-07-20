@@ -42,7 +42,7 @@ const ProductList = ({ addToCart }) => {
                 {data.map((product) => (
                     <li key={product.id} className='item'>
                         <img src={product.image} alt={product.label} />
-                        {product.name} - ${product.price}
+                        {product.name}
                         <input
                             type="number"
                             min="0"

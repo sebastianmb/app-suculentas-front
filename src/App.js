@@ -23,6 +23,7 @@ import PaymentForm from './components/PaymentForm';
 function App() {
   
   const [cartItems, setCartItems] = useState([]);
+  
 
   const addToCart = (product) => {
     setCartItems([...cartItems, product]);
@@ -33,9 +34,10 @@ function App() {
   };
 
 
-
-
-
+  let totalPrice = 0;
+  cartItems.forEach((item) => {
+    totalPrice += item.price;
+  });
 
 
   return (
@@ -124,7 +126,7 @@ function App() {
         {cartItems.length > 0 && (
           <>
             <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
-            <PaymentForm />
+            <PaymentForm price={totalPrice} /> {/* Pasa el precio del carrito como prop */}
           </>
         )}
 
