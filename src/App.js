@@ -39,6 +39,10 @@ function App() {
     totalPrice += item.price;
   });
 
+  const saveBuy=()=>{
+    console.log(cartItems)
+  }
+
 
   return (
     <DataProvider>
@@ -126,6 +130,7 @@ function App() {
         {cartItems.length > 0 && (
           <>
             <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
+            <button onClick={saveBuy} className='Confirm'>Confirmar</button>
             <PaymentForm price={totalPrice} /> {/* Pasa el precio del carrito como prop */}
           </>
         )}
