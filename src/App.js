@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import axios from 'axios';
 // Datos
 import DataProvider from './components/context/DataContext';
 
@@ -40,6 +41,16 @@ function App() {
   });
 
   const saveBuy=()=>{
+
+    axios.post('http://localhost:3900/api/compras', { compra: cartItems })
+      .then((response) => {
+        // Maneja la respuesta del backend si es necesario
+        console.log(response.data.message);
+      })
+      .catch((error) => {
+        // Maneja cualquier error en la solicitud
+        console.error('Error al enviar la compra:', error);
+      });
     console.log(cartItems)
   }
 
