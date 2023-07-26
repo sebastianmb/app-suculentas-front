@@ -22,9 +22,11 @@ import PaymentForm from './components/PaymentForm';
 
 
 function App() {
-  
+
   const [cartItems, setCartItems] = useState([]);
-  
+  const [showPaymentForm, setShowPaymentForm] = useState(false); // Estado para controlar la visibilidad de PaymentForm
+
+
 
   const addToCart = (product) => {
     setCartItems([...cartItems, product]);
@@ -40,7 +42,7 @@ function App() {
     totalPrice += item.price;
   });
 
-  const saveBuy=()=>{
+  const saveBuy = () => {
 
     axios.post('http://localhost:3900/api/compras', { compra: cartItems })
       .then((response) => {
@@ -51,10 +53,11 @@ function App() {
         // Maneja cualquier error en la solicitud
         console.error('Error al enviar la compra:', error);
       });
-    console.log(cartItems)
+    console.log(cartItems);
+    setShowPaymentForm(true); // Mostrar el formulario de pago cuando se haga clic en Confirmar
   }
 
-
+  
   return (
     <DataProvider>
       <div className="App">
@@ -138,14 +141,13 @@ function App() {
 
         </div>
 
-        {cartItems.length > 0 && (
+        {cartItems.length > 0 && !showPaymentForm && (
           <>
             <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
             <button onClick={saveBuy} className='Confirm'>Confirmar</button>
-            <PaymentForm price={totalPrice} /> {/* Pasa el precio del carrito como prop */}
           </>
         )}
-
+        {showPaymentForm && <PaymentForm price={totalPrice} />}
 
 
         {/*Commerce*/}
