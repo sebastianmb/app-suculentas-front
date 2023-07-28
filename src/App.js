@@ -25,7 +25,7 @@ function App() {
 
   const [cartItems, setCartItems] = useState([]);
   const [showPaymentForm, setShowPaymentForm] = useState(false); // Estado para controlar la visibilidad de PaymentForm
-
+  
 
 
   const addToCart = (product) => {
@@ -56,6 +56,7 @@ function App() {
     console.log(cartItems);
     setShowPaymentForm(true); // Mostrar el formulario de pago cuando se haga clic en Confirmar
   }
+   
 
   
   return (
@@ -106,12 +107,11 @@ function App() {
             </div>
             <div className='seleccion'>
               <span className='suculentas-base'>
-                <b>Seleccione suculentas base</b>
+                <b>Seleccione suculentas mediana altura</b>
               </span>
               <div>
                 <p style={{ margin: '50px', marginTop: '150px', textAlign: 'left', fontSize: '17px' }}>
-                  <strong>¡Descubre nuestras suculentas de categoría base!</strong> Estas suculentas de baja altura se extienden a lo largo del suelo, creando hermosas alfombras naturales.
-                  Con su crecimiento compacto y su capacidad para resistir condiciones adversas, estas suculentas agregarán un toque de belleza duradera y de bajo mantenimiento a tu entorno.
+                <strong>Explora nuestra asombrosa selección de suculentas de categoría mediana altura!!!!</strong> Estas hermosas plantas destacan con su tamaño versátil, elevándose con elegancia desde el suelo. Su crecimiento compacto y su resistencia a diversas condiciones hacen que estas suculentas sean ideales para agregar un toque de belleza natural y bajo mantenimiento a cualquier espacio.
                 </p>
               </div>
             </div>
@@ -127,12 +127,11 @@ function App() {
             </div>
             <div className='seleccion'>
               <span className='suculentas-base'>
-                <b>Seleccione suculentas base</b>
+                <b>Seleccione suculentas altas</b>
               </span>
               <div>
                 <p style={{ margin: '50px', marginTop: '150px', textAlign: 'left', fontSize: '17px' }}>
-                  <strong>¡Descubre nuestras suculentas de categoría base!</strong> Estas suculentas de baja altura se extienden a lo largo del suelo, creando hermosas alfombras naturales.
-                  Con su crecimiento compacto y su capacidad para resistir condiciones adversas, estas suculentas agregarán un toque de belleza duradera y de bajo mantenimiento a tu entorno.
+                  <strong>Descubre nuestras impresionantes suculentas de categoría alta.</strong> Estas majestuosas plantas se alzan con gracia, ofreciendo una presencia imponente en cualquier espacio. Con su crecimiento vertical y sus fascinantes formas, estas suculentas añadirán un toque de esplendor natural y fácil cuidado a tu entorno. Disfruta de la elegancia y singularidad que estas suculentas aportan a tu colección de plantas.
                 </p>
               </div>
             </div>
@@ -147,7 +146,7 @@ function App() {
             <button onClick={saveBuy} className='Confirm'>Confirmar</button>
           </>
         )}
-        {showPaymentForm && <PaymentForm price={totalPrice} />}
+        {showPaymentForm && (<PaymentForm price={totalPrice}/>)}
 
 
         {/*Commerce*/}

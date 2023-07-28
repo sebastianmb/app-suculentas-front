@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 
+
+
 const PaymentForm = ({price}) => {
   useEffect(() => {
 
@@ -18,18 +20,27 @@ const PaymentForm = ({price}) => {
     script.dataset.amountInCents = (price*100).toString();
     script.dataset.reference = uniqueReference;
     script.dataset.signature_integrity = '37c8407747e595535433ef8f6a811d853cd943046624a0ec04662b17bbf33bf5';
+    script.dataset.redirectUrl="http://localhost:3000/"
 
     const form = document.getElementById('payment-form');
     if (form) {
       form.appendChild(script);
-    }
+    
+    
+    };
+  
+
+   
 
     return () => {
       if (form) {
         form.removeChild(script);
       }
     };
-  }, []);
+
+   
+
+  }, [price]);
 
   return (
     <form id="payment-form">
