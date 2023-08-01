@@ -1,5 +1,5 @@
 [
-    { "id": 1, "category":"suculenta", "name": "Product 1", "price": 10, "quantity": 0, "image": "https://i0.wp.com/wokii.com/wp-content/uploads/2021/08/suculenta-cactacea-scaled.jpg?fit=2560%2C1707&ssl=1" },
+    { "id": 1, "category":"suculenta", "name": "suc_base", "price": 10, "quantity": 0, "image": "base1.jpeg" },
     { "id": 2, "category":"suculenta","name": "Product 2", "price": 15, "quantity": 0, "image": "https://i0.wp.com/wokii.com/wp-content/uploads/2021/08/suculenta-cactacea-scaled.jpg?fit=2560%2C1707&ssl=1" },
     { "id": 3, "category":"suculenta","name": "Product 3", "price": 20, "quantity": 0, "image": "https://i0.wp.com/wokii.com/wp-content/uploads/2021/08/suculenta-cactacea-scaled.jpg?fit=2560%2C1707&ssl=1" },
     { "id": 4, "category":"suculenta","name": "Product 4", "price": 30, "quantity": 0, "image": "https://i0.wp.com/wokii.com/wp-content/uploads/2021/08/suculenta-cactacea-scaled.jpg?fit=2560%2C1707&ssl=1" },
