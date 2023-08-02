@@ -5,7 +5,7 @@ import { dataContext } from './context/DataContext';
 
 
 
-const ProductList = ({ addToCart }) => {
+const ProductList = ({ addToCart,category }) => {
     const [selectedProducts, setSelectedProducts] = useState({});
 
 
@@ -34,12 +34,15 @@ const ProductList = ({ addToCart }) => {
         }));
     };
 
+    // Filtramos solo los productos de la categoría especificada
+  const filteredProducts = data.filter(product => product.category === category);
+
     return (
         <div>
             
             
             <ul className='container-products'>
-                {data.map((product) => (
+                {filteredProducts.map((product) => (
                     <li key={product.id} className='item'>
                         <img src={product.image} alt={product.label} />
                         {product.name}
