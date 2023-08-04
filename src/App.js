@@ -102,7 +102,7 @@ function App() {
         <div id='suculentas-buy'>
           <div className='center-suculentas'>
             <div className='mostrario'>
-              <Products addToCart={addToCart}
+              <Products addToCart={addToCart} category="media"
               />
             </div>
             <div className='seleccion'>
@@ -122,7 +122,7 @@ function App() {
         <div id='suculentas-buy'>
           <div className='center-suculentas'>
             <div className='mostrario'>
-              <Products addToCart={addToCart}
+              <Products addToCart={addToCart} category="alta"
               />
             </div>
             <div className='seleccion'>
