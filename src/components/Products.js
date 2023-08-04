@@ -45,7 +45,7 @@ const ProductList = ({ addToCart,category }) => {
                 {filteredProducts.map((product) => (
                     <li key={product.id} className='item'>
                         <img src={product.image} alt={product.label} />
-                        {product.name}
+                        {/*product.name*/}
                         <input
                             type="number"
                             min="0"
