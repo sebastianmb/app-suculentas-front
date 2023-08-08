@@ -2,27 +2,60 @@
 
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import App from './App';
-import axios from 'axios'; // Importar axios para realizar mock de las llamadas a la API
+import { dataContext } from './components/context/DataContext';
+import Products from './Products';
 
+describe('Products Component', () => {
+  // Mocking the data context for testing
+  const mockData = {
+    data:[
+      { "id": 1, "category":"base", "name":"Product 1", "quantity": 0, "image": "base1.jpeg" },
+      { "id": 2, "category":"base","name": "Product 2",  "quantity": 0, "image": "base2.jpeg" },
+      { "id": 3, "category":"media","name": "Product 3", "quantity": 0, "image": "media1.jpeg" },
+      { "id": 4, "category":"media","name": "Product 4", "quantity": 0, "image": "media2.jpeg" },
+      { "id": 5, "category":"media","name": "Product 5", "quantity": 0, "image": "media3.jpeg" },
+      { "id": 6, "category":"media","name": "Product 6", "quantity": 0, "image": "media4.jpeg" },
+      { "id": 7, "category":"media","name": "Product 7", "quantity": 0, "image": "media5.jpeg" },
+      { "id": 8, "category":"media","name": "Product 8", "quantity": 0, "image": "media6.jpeg" },
+      { "id": 9, "category":"alta","name": "Product 9", "quantity": 0, "image": "alta1.jpeg" },
+      { "id": 10, "category":"alta","name": "Product 10", "quantity": 0, "image": "alta2.jpeg" },
+      { "id": 11, "category":"pot","name": "small", "price": 45, "quantity":1, "image": "potpeq" },
+      { "id": 12, "category":"pot","name": "medium", "price": 60, "quantity":1, "image": "potmed" },
+      { "id": 13, "category":"pot","name": "large", "price": 80, "quantity":1, "image": "potgra" }
+     
+     
+  ]
+  };
 
-jest.mock('axios', () => ({
-  post: jest.fn(() => Promise.resolve({ data: { message: 'Compra exitosa' } })),
-}));
+  test('renders products correctly', () => {
+    render(
+      <dataContext.Provider value={mockData}>
+        <Products addToCart={() => {}} category="base" />
+      </dataContext.Provider>
+    );
 
+    // Replace this with your actual rendering logic
+    const productElements = screen.getAllByTestId('product'); // Use the appropriate test id
 
+    expect(productElements).toHaveLength(mockData.data.length);
+  });
 
-test('renders App correctly', () => {
-  // ... Pruebas aquí ...
+  test('adds product to cart when "Add to Cart" is clicked', () => {
+    // Initialize a mock addToCart function
+    const addToCartMock = jest.fn();
 
-  render(<App />);
+    render(
+      <dataContext.Provider value={mockData}>
+        <Products addToCart={addToCartMock} category="base" />
+      </dataContext.Provider>
+    );
 
-  // Verifica que el encabezado esté presente
-  const headerElement = screen.getByText('Mi Encabezado');
-  expect(headerElement).toBeInTheDocument();
+    // Replace this with your actual rendering and interaction logic
+    const addToCartButtons = screen.getAllByText('Add to Cart'); // Use the appropriate text
+    fireEvent.click(addToCartButtons[0]); // Click the first "Add to Cart" button
 
-  // Verifica que el slider esté presente
-  const sliderElement = screen.getByTestId('slider-component');
-  expect(sliderElement).toBeInTheDocument();
+    expect(addToCartMock).toHaveBeenCalledWith(mockData.data[0]); // Check if addToCart function was called with the correct product
+  });
+
+  // Add more test cases as needed
 });
-
