@@ -215,6 +215,7 @@ body {
   height: 700px;
   width: 100%;
   border-top: solid #444;
+  margin-bottom: 30px;
 
 }
 
@@ -374,7 +375,7 @@ body {
 
 .item img {
  
-  width: 150px;
+  width: 180px;
   padding-bottom: 8px;
 
 }
@@ -382,10 +383,52 @@ body {
 /*Footer*/
 .footer {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
+  justify-content: space-around;
+ padding: 20px;
   background-color: #71ffff;
+}
+
+
+.footer-section {
+  flex: 1;
+  margin: 0 10px;
+  padding: 10px;
+  border-right: 1px solid #ccc;
+  text-align: left;
+}
+
+.footer-section:last-child {
+  border-right: none;
+}
+
+/* Estilos para los enlaces en las secciones del footer */
+.footer-section a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-section h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+.footer-section p:last-child {
+  margin-bottom: 0;
+
+}
+
+.footer-section ol {
+  font-size: 0.9em;
+  margin-left: 20px;
+}
+
+.footer-section li {
+  margin-bottom: 5px;
 }
 
 /* Estilos CSS para el carrito */
