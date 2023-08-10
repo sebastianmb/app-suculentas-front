@@ -1,4 +1,4 @@
-import React from 'react';
+import React , { useState } from 'react';
 
 
 import pot from "../assets/images/pot.jpg";
@@ -13,13 +13,15 @@ const Pot = ({ addToCart }) => {
   
 
   const products = [
-    { id: 11, name: 'small', price: 45000, quantity:1, image: potpeq },
-    { id: 12, name: 'medium', price: 60000, quantity:1, image: potmed },
-    { id: 13, name: 'large', price: 80000, quantity:1, image: potgra },
+    { id: 11, name: 'small', price: 45000, quantity:1, maxQuantity:10, image: potpeq },
+    { id: 12, name: 'medium', price: 60000, quantity:1, maxQuantity:15,image: potmed },
+    { id: 13, name: 'large', price: 80000, quantity:1, maxQuantity:20,image: potgra },
   ];
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   const handleAddToCart = (product) => {
     addToCart(product);
+    setSelectedProduct(product);
   };
 
   
@@ -40,6 +42,9 @@ const Pot = ({ addToCart }) => {
                   {/*product.price*/}
                 </button>
                 <p><strong>$ {product.price}</strong></p>
+                {selectedProduct && selectedProduct.id === product.id && (
+                  <p className='max-quantity-message'>Cantidad máxima de suculentas que puede seleccionar: {product.maxQuantity}</p>
+                )}
                 </div>
               ))}
               
