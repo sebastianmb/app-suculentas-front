@@ -220,6 +220,17 @@ body {
 }
 
 
+#suculentas-buy-media {
+  background-color: white;
+  position: relative;
+  height: 900px;
+  width: 100%;
+  border-top: solid #444;
+  margin-bottom: 30px;
+
+}
+
+
 .center-suculentas {
   width: 95%;
   height: 95%;

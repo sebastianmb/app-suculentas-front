@@ -99,7 +99,7 @@ function App() {
 
 
         </div>
-        <div id='suculentas-buy'>
+        <div id='suculentas-buy-media'>
           <div className='center-suculentas-media'>
             <div className='mostrario'>
               <Products addToCart={addToCart} category="media"
