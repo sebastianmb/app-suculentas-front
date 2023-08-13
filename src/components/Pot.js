@@ -14,8 +14,8 @@ const Pot = ({ addToCart }) => {
 
   const products = [
     { id: 11, name: 'small', price: 45000, quantity:1, maxQuantity:10, image: potpeq },
-    { id: 12, name: 'medium', price: 60000, quantity:1, maxQuantity:15,image: potmed },
-    { id: 13, name: 'large', price: 80000, quantity:1, maxQuantity:20,image: potgra },
+    { id: 12, name: 'medium', price: 65000, quantity:1, maxQuantity:15,image: potmed },
+    { id: 13, name: 'large', price: 75000, quantity:1, maxQuantity:20,image: potgra },
   ];
   const [selectedProduct, setSelectedProduct] = useState(null);
 
