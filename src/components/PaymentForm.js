@@ -19,7 +19,7 @@ const PaymentForm = ({price}) => {
     script.dataset.currency = 'COP';
     script.dataset.amountInCents = (price*100).toString();
     script.dataset.reference = uniqueReference;
-    script.dataset.signature_integrity = '37c8407747e595535433ef8f6a811d853cd943046624a0ec04662b17bbf33bf5';
+    script.dataset.signature_integrity = 'test_integrity_H4xVIKNnEIpsfXUoy4CfTnyQPaF4655O';
     script.dataset.redirectUrl="http://localhost:3000/";
      
 
