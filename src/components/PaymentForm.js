@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { SHA256 } from 'crypto-js';
+import axios from 'axios';
+
 
 const PaymentForm = ({ price }) => {
   const [hash, setHash] = useState('');
@@ -10,16 +11,21 @@ const PaymentForm = ({ price }) => {
       return;
     }
 
-    // Definir las variables aquí
-    const reference = Date.now().toString();
-    const monto = (price * 100).toString();
-    const currency = 'COP';
-    const signatureIntegrity = 'test_integrity_H4xVIKNnEIpsfXUoy4CfTnyQPaF4655O';
+    const monto = (price * 100).toString(); // Define monto here
+    let hashHex; // Declare hashHex here
 
-    const concatenatedValue = reference + monto + currency + signatureIntegrity;
-    const hashHex = SHA256(concatenatedValue).toString();
-    
-    setHash(hashHex);
+
+    axios.get('http://localhost:3900/generate-hash', {
+      params: { monto }
+    })
+      .then(response => {
+        hashHex = response.data.hash; // Define hashHex here
+        setHash(hashHex);
+      })
+      .catch(error => {
+        console.error('Error fetching hash:', error);
+      });
+
 
     const uniqueReference = Date.now().toString();
     const script = document.createElement('script');
@@ -29,7 +35,7 @@ const PaymentForm = ({ price }) => {
     script.dataset.currency = 'COP';
     script.dataset.amountInCents = monto; // Use the calculated monto
     script.dataset.reference = uniqueReference;
-    script.dataset.signature_integrity = hashHex;
+    script.dataset.signature_integrity = hashHex; // Use hashHex here
     script.dataset.redirectUrl = 'http://localhost:3000/';
 
     const form = document.getElementById('payment-form');
@@ -46,7 +52,7 @@ const PaymentForm = ({ price }) => {
 
   return (
     <div>
-      
+
       <form id="payment-form">
         {/* Aquí puedes agregar el contenido del formulario, como campos de entrada u otros elementos */}
       </form>
